@@ -27,7 +27,7 @@ const MobileMenu = () => {
       ${isOpen? "translate-x-0":"-translate-x-full"}
       `}>
         <div className="flex w-full items-center justify-between h-20 max-width border-b border-peach">
-          <Link href={"/"}>
+          <Link href={"/"} onClick={()=>setIsOpen(false)}>
             <h5 className="text-purple text-xl font-semibold">Naimur Rahman</h5>
           </Link>
           <button className="text-gray-700 hover:text-purple transition-colors"
@@ -39,7 +39,7 @@ const MobileMenu = () => {
         <nav className="flex flex-col items-center justify-center flex-1 gap-10">
         <ul className="flex items-center flex-col gap-5">
             {navLinks.map((link,index)=>(
-              <li key={index}>
+              <li key={index} onClick={()=>setIsOpen(false)}>
                 <NavLink
                   href={link.url}
                   label={link.label}
@@ -69,4 +69,4 @@ const MobileMenu = () => {
   )
 }
 
-export default MobileMenu
+export default MobileMenu;

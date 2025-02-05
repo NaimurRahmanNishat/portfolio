@@ -8,7 +8,8 @@ interface Props{
     href: string;
     label: string;
     className?: string;
-}
+    onClick?: ()=>void;
+  }
 
 const NavLink = ({href,label,className}:Props) => {
 
